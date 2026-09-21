@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffd6e7 0%, #f8a9c4 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #f8c4d8;
+    box-shadow: 0 10px 25px rgba(190, 82, 125, 0.18);
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+}
+
+.login-card::before {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    color: #e889ad;
+    font-size: 22px;
+}
+
+.login-card::after {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    color: #e889ad;
+    font-size: 22px;
+}
+
+.login-card h2 {
+    color: #c85c87;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.login-card h2::after {
+    content: " 🐾";
+}
+
+.subtitle {
+    text-align: center;
+    color: #a66a7e;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8f536b;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #efb5ca;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    outline: none;
+    color: #6f4657;
+    background-color: #fffafd;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #c9a2b1;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #e889ad;
+    box-shadow: 0 0 0 3px rgba(232, 137, 173, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 13px;
+    background-color: #e889ad;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    background-color: #d96f98;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
