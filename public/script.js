@@ -1,22 +1,14 @@
 const form = document.getElementById('loginForm');
-const nomeInput = document.getElementById('nome');
 const emailInput = document.getElementById('email');
-const telefoneInput = document.getElementById('telefone');
-const petInput = document.getElementById('pet');
-const tipoPetInput = document.getElementById('tipoPet');
-const servicoInput = document.getElementById('servico');
+const senhaInput = document.getElementById('senha');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const nome = nomeInput.value.trim();
   const email = emailInput.value.trim();
-  const telefone = telefoneInput.value.trim();
-  const pet = petInput.value.trim();
-  const tipoPet = tipoPetInput.value;
-  const servico = servicoInput.value;
+  const senha = senhaInput.value;
 
-  if (!nome || !email || !telefone || !pet || !tipoPet || !servico) {
+  if (!email || !senha) {
     alert('Por favor, preencha todos os campos.');
     return;
   }
@@ -27,14 +19,7 @@ form.addEventListener('submit', async (e) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        nome,
-        email,
-        telefone,
-        pet,
-        tipoPet,
-        servico
-      }),
+      body: JSON.stringify({ email, senha }),
     });
 
     const data = await response.json();

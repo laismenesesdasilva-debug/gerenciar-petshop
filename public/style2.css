@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #fff5f9 0%,
+        #ffe4ef 50%,
+        #ffd1e3 100%
+    );
+    color: #7a3d58;
+    padding: 20px;
+}
+
+body::before {
+    content: "🐾";
+    position: fixed;
+    top: 8%;
+    left: 8%;
+    font-size: 55px;
+    opacity: 0.12;
+    transform: rotate(-20deg);
+}
+
+body::after {
+    content: "🐾";
+    position: fixed;
+    bottom: 8%;
+    right: 8%;
+    font-size: 65px;
+    opacity: 0.12;
+    transform: rotate(20deg);
+}
+
+#boasVindas {
+    background: #ffffff;
+    padding: 35px 50px;
+    border-radius: 25px;
+    color: #e45d91;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(214, 91, 135, 0.18);
+    margin-bottom: 25px;
+    border: 3px solid #ffd1e2;
+}
+
+#btnLogout {
+    border: none;
+    outline: none;
+    background: linear-gradient(
+        135deg,
+        #f58bb2,
+        #e85c91
+    );
+    color: white;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(224, 86, 135, 0.25);
+    transition: all 0.3s ease;
+}
+
+#btnLogout:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(
+        135deg,
+        #e85c91,
+        #d9487d
+    );
+    box-shadow: 0 10px 20px rgba(224, 86, 135, 0.35);
+}
+
+#btnLogout:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+    #boasVindas {
+        width: 90%;
+        padding: 30px 20px;
+        font-size: 24px;
+    }
+
+    #btnLogout {
+        padding: 13px 30px;
+    }
+}
