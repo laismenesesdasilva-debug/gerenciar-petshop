@@ -9,6 +9,11 @@
 
 <body>
 
+    <nav class="top-nav">
+        <a href="index.html">Login</a>
+        <a href="cadastro-pet.html" class="nav-active">Cadastrar Pet</a>
+    </nav>
+
     <div class="pet-card">
 
         <div class="pet-icon">🐾</div>
@@ -19,22 +24,58 @@
         <form id="petForm">
 
             <div class="input-group">
+                <label for="email">📧 E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="seu@email.com"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="senha">🔒 Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
                 <label for="tutor">👤 Nome do Tutor</label>
-                <input type="text" id="tutor" placeholder="Digite seu nome" required>
+                <input
+                    type="text"
+                    id="tutor"
+                    placeholder="Digite seu nome"
+                    required
+                >
             </div>
 
             <div class="input-group">
                 <label for="nomePet">🐶 Nome do Animal</label>
-                <input type="text" id="nomePet" placeholder="Nome do seu pet" required>
+                <input
+                    type="text"
+                    id="nomePet"
+                    placeholder="Nome do seu pet"
+                    required
+                >
             </div>
 
             <div class="input-group">
                 <label for="raca">🐾 Raça</label>
-                <input type="text" id="raca" placeholder="Ex.: Golden Retriever" required>
+                <input
+                    type="text"
+                    id="raca"
+                    placeholder="Ex.: Golden Retriever"
+                    required
+                >
             </div>
 
             <div class="input-group">
                 <label for="genero">💗 Gênero</label>
+
                 <select id="genero" required>
                     <option value="">Selecione o gênero...</option>
                     <option value="Fêmea">🎀 Fêmea</option>
@@ -43,18 +84,32 @@
             </div>
 
             <div class="row">
+
                 <div class="input-group">
                     <label for="peso">⚖️ Peso</label>
-                    <input type="number" id="peso" step="0.1" placeholder="Kg" required>
+                    <input
+                        type="number"
+                        id="peso"
+                        step="0.1"
+                        placeholder="Kg"
+                        required
+                    >
                 </div>
 
                 <div class="input-group">
                     <label for="idade">🎂 Idade</label>
-                    <input type="number" id="idade" placeholder="Anos" required>
+                    <input
+                        type="number"
+                        id="idade"
+                        placeholder="Anos"
+                        required
+                    >
                 </div>
+
             </div>
 
             <div class="input-group">
+
                 <label for="imagem">📷 Foto do Pet</label>
 
                 <label class="upload-box" for="imagem">
@@ -63,9 +118,19 @@
                     <small>JPG, PNG ou JPEG</small>
                 </label>
 
-                <input type="file" id="imagem" accept="image/*" required>
+                <input
+                    type="file"
+                    id="imagem"
+                    accept="image/*"
+                    required
+                >
 
-                <img id="preview" class="preview" alt="Prévia da foto do pet">
+                <img
+                    id="preview"
+                    class="preview"
+                    alt="Prévia da foto do pet"
+                >
+
             </div>
 
             <button type="submit">
@@ -83,10 +148,4 @@
     <script src="script-pet.js"></script>
 
 </body>
-
-<nav class="top-nav">
-    <a href="index.html">Login</a>
-    <a href="cadastro-pet.html" class="nav-active">Cadastrar Pet</a>
-</nav>
-
 </html>
