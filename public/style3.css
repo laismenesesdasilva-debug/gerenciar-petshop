@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 100px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffd6e7 0 70px, transparent 71px),
+        radial-gradient(circle at 90% 80%, #ffe4ef 0 100px, transparent 101px),
+        linear-gradient(135deg, #fff5f9, #ffe8f1);
+}
+
+body::before {
+    content: "♡";
+    position: fixed;
+    top: 8%;
+    left: 8%;
+    font-size: 45px;
+    color: #f7a9c5;
+}
+
+body::after {
+    content: "♡";
+    position: fixed;
+    bottom: 8%;
+    right: 8%;
+    font-size: 55px;
+    color: #f6b6ce;
+}
+
+.top-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 5px;
+
+    background: #ffffff;
+    border-radius: 25px;
+
+    box-shadow: 0 6px 20px rgba(217, 87, 135, 0.18);
+
+    z-index: 1000;
+}
+
+.top-nav a {
+    display: block;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    color: #c65d86;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.top-nav a:hover {
+    background: #ffe8f1;
+}
+
+.top-nav .nav-active {
+    background: #e96f9d;
+    color: white;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 30px;
+
+    border: 2px solid #ffffff;
+
+    box-shadow:
+        0 20px 50px rgba(214, 91, 137, 0.18),
+        0 5px 15px rgba(214, 91, 137, 0.08);
+
+    position: relative;
+    z-index: 1;
+}
+
+.login-card h2 {
+    text-align: center;
+
+    color: #d95787;
+
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8e5067;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 2px solid #f5d7e2;
+    border-radius: 14px;
+
+    background: #fffafa;
+
+    color: #67404e;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+input:focus,
+select:focus {
+    border-color: #ed8fb1;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 4px rgba(237, 143, 177, 0.12);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-box {
+    min-height: 110px;
+
+    border: 2px dashed #efa4bf;
+    border-radius: 18px;
+
+    background: #fff7fa;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #c65d86 !important;
+
+    transition: 0.25s;
+}
+
+.upload-box:hover {
+    background: #ffedf4;
+    border-color: #df739e;
+}
+
+.preview {
+    display: none;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    margin-top: 12px;
+
+    border-radius: 18px;
+
+    border: 3px solid #f8c3d6;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+button,
+.btn-submit {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #e96f9d, #d95787);
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 18px rgba(217, 87, 135, 0.25);
+
+    transition: 0.25s;
+}
+
+button:hover,
+.btn-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 22px rgba(217, 87, 135, 0.32);
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 90px 15px 30px;
+    }
+
+    .top-nav {
+        top: 12px;
+        width: auto;
+    }
+
+    .top-nav a {
+        padding: 8px 13px;
+        font-size: 11px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+        border-radius: 25px;
+    }
+
+    .row {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pet 🐾</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="pet-card">
+
+        <div class="pet-icon">🐾</div>
+
+        <h1>Cadastrar Pet</h1>
+        <p class="subtitle">Conte um pouquinho sobre seu melhor amigo 💕</p>
+
+        <form id="petForm">
+
+            <div class="input-group">
+                <label for="tutor">👤 Nome do Tutor</label>
+                <input type="text" id="tutor" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="nomePet">🐶 Nome do Animal</label>
+                <input type="text" id="nomePet" placeholder="Nome do seu pet" required>
+            </div>
+
+            <div class="input-group">
+                <label for="raca">🐾 Raça</label>
+                <input type="text" id="raca" placeholder="Ex.: Golden Retriever" required>
+            </div>
+
+            <div class="input-group">
+                <label for="genero">💗 Gênero</label>
+                <select id="genero" required>
+                    <option value="">Selecione o gênero...</option>
+                    <option value="Fêmea">🎀 Fêmea</option>
+                    <option value="Macho">💙 Macho</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="peso">⚖️ Peso</label>
+                    <input type="number" id="peso" step="0.1" placeholder="Kg" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="idade">🎂 Idade</label>
+                    <input type="number" id="idade" placeholder="Anos" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="imagem">📷 Foto do Pet</label>
+
+                <label class="upload-box" for="imagem">
+                    <span class="upload-icon">📸</span>
+                    <span>Clique para escolher uma foto</span>
+                    <small>JPG, PNG ou JPEG</small>
+                </label>
+
+                <input type="file" id="imagem" accept="image/*" required>
+
+                <img id="preview" class="preview" alt="Prévia da foto do pet">
+            </div>
+
+            <button type="submit">
+                Cadastrar Pet 🐾
+            </button>
+
+        </form>
+
+        <div class="footer">
+            Feito com 💕 para quem ama pets
+        </div>
+
+    </div>
+
+    <script src="script-pet.js"></script>
+
+</body>
+
+<nav class="top-nav">
+    <a href="index.html">Login</a>
+    <a href="cadastro-pet.html" class="nav-active">Cadastrar Pet</a>
+</nav>
+
+</html>
